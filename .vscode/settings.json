@@ -1,0 +1,10 @@
+{
+  "cSpell.words": [],
+  "files.exclude": {
+    "**/*.freezed.dart": true,
+    "**/*.g.dart": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  }
+}
