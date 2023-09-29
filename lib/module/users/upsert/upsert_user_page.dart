@@ -7,6 +7,8 @@ import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:http/http.dart' as http;
 import 'package:review_knowleadge/global/data/models/user/user.dart';
 
+import '../../../global/widgets/image_input.dart';
+
 class UpsertUserPage extends StatefulWidget {
   const UpsertUserPage({super.key});
 
@@ -83,7 +85,7 @@ class _UpsertUserPageState extends State<UpsertUserPage> {
                 // initialValue: ,
                 autovalidateMode: AutovalidateMode.onUserInteraction,
                 decoration: const InputDecoration(
-                  label: Text('Name'),
+                  // label: Text('Name'),
                   hintText: 'Enter name',
                   suffixIcon: SizedBox.square(dimension: 40),
                 ),
@@ -102,7 +104,7 @@ class _UpsertUserPageState extends State<UpsertUserPage> {
                 // initialValue:,
                 autovalidateMode: AutovalidateMode.onUserInteraction,
                 decoration: const InputDecoration(
-                  label: Text('Age'),
+                  // label: Text('Age'),
                   hintText: 'Enter age',
                   suffixIcon: SizedBox.square(dimension: 40),
                 ),
@@ -121,7 +123,7 @@ class _UpsertUserPageState extends State<UpsertUserPage> {
                 // initialValue: ,
                 autovalidateMode: AutovalidateMode.onUserInteraction,
                 decoration: const InputDecoration(
-                  label: Text('Profession'),
+                  // label: Text('Profession'),
                   hintText: 'Enter profession',
                   suffixIcon: SizedBox.square(dimension: 40),
                 ),
@@ -133,6 +135,18 @@ class _UpsertUserPageState extends State<UpsertUserPage> {
                     ),
                   ],
                 ),
+              ),
+              const SizedBox(height: 10),
+              FormBuilderField(
+                name: 'avatar',
+                // initialValue: ,
+                builder: (field) {
+                  return ImageInput(
+                    onChanged: (value) {
+                      field.didChange(value);
+                    },
+                  );
+                },
               ),
               const SizedBox(height: 16),
               Row(
@@ -151,7 +165,7 @@ class _UpsertUserPageState extends State<UpsertUserPage> {
                     child: const Text('Create data'),
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),

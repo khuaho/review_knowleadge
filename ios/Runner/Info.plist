@@ -47,5 +47,11 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>In order to digitize documents from images, this app requires access to your photos gallery.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>In order to scan and digitize documents, this app requires access to your camera.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>In order to access to the microphone, if you intend to record videos</string>
 </dict>
 </plist>

@@ -137,6 +137,7 @@ class _UsersPageState extends State<UsersPage> {
               );
             }
             return ListView.builder(
+              padding: const EdgeInsets.all(16),
               itemCount: snapshot.data.length,
               itemBuilder: (context, index) {
                 final item = snapshot.data[index];
@@ -200,6 +201,7 @@ class _UsersPageState extends State<UsersPage> {
 
   Widget userTile(User item) {
     return Card(
+      margin: const EdgeInsets.symmetric(vertical: 8),
       child: Padding(
         padding: const EdgeInsets.all(10),
         child: Row(
